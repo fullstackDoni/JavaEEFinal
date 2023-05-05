@@ -5,12 +5,12 @@ public class Users {
     private String email;
     private String password;
     private String full_name;
-    private int role;
+    private String role;
 
     public Users() {
     }
 
-    public Users(int id, String email, String password, String full_name, int role) {
+    public Users(int id, String email, String password, String full_name, String role) {
         this.id = id;
         this.email = email;
         this.password = password;
@@ -50,7 +50,7 @@ public class Users {
         this.full_name = full_name;
     }
 
-    public int getRole() {
+    public String getRole() {
         return role;
     }
 

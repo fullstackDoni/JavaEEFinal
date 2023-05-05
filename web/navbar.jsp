@@ -13,6 +13,12 @@
                         <a class="nav-link mx-2" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link mx-2" href="/profile">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="/AddNews">AddNews</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link mx-2" href="/register">Register</a>
                     </li>
                     <li class="nav-item dropdown">
