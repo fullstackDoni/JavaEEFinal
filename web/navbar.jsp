@@ -1,3 +1,8 @@
+<%@ page import="kz.bitlab.models.Users" %>
+<%
+    Users currentUser = (Users) session.getAttribute("currentUser");
+%>
+
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
         <div class="container-fluid">
@@ -12,14 +17,14 @@
                     <li class="nav-item">
                         <a class="nav-link mx-2" href="/login">Login</a>
                     </li>
+                    <%
+                        if (currentUser != null) {
+                    %>
                     <li class="nav-item">
                         <a class="nav-link mx-2" href="/profile">Profile</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link mx-2" href="/AddNews">AddNews</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link mx-2" href="/register">Register</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
@@ -29,9 +34,21 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="#">Blog</a></li>
                             <li><a class="dropdown-item" href="#">About Us</a></li>
-                            <li><a class="dropdown-item" href="#">Contact us</a></li>
+                            <li><a class="dropdown-item" href="/logout">Logout</a></li>
                         </ul>
                     </li>
+                    <%
+                    } else {
+                    %>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="/login">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="/register">Register</a>
+                    </li>
+                    <%
+                        }
+                    %>
                 </ul>
             </div>
         </div>
