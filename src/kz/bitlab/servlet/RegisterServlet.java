@@ -24,6 +24,7 @@ public class RegisterServlet extends HttpServlet {
             users1.setFull_name(fullName);
             users1.setPassword(password);
             users1.setEmail(email);
+            users1.setRole(2);
             Users u = DBConnection.createUser(users1);
             resp.sendRedirect("/login");
 

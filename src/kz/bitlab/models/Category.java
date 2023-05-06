@@ -1,22 +1,22 @@
 package kz.bitlab.models;
 
-public class Categories {
-    int id;
-    String name;
+public class Category {
+    private Long id;
+    private String name;
 
-    public Categories() {
+    public Category() {
     }
 
-    public Categories(int id, String name) {
+    public Category(Long id, String name) {
         this.id = id;
         this.name = name;
     }
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
