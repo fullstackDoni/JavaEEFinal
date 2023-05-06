@@ -14,6 +14,16 @@
              height="400">
         <div class="mt-4">
             <div class="col-12">
+                <form action="/" method="get">
+                    <div class="row mt-3">
+                        <div class="col-9">
+                            <input type="text" class="form-control" name="key" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <button class="btn btn-success">Search</button>
+                    </div>
+                </form>
                 <%
                     ArrayList<News> news = (ArrayList<News>) request.getAttribute("news");
                     if (news != null) {
